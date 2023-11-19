@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background-color: #EEEEEE;
+}
+
+header {
+  width: 100%;
+  height: 45px;
+  background-color: blue;
+  position: relative;
+}
+
+header h3 {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 220px;
+  height: 28px;
+}
+
+.container{
+  max-width: 1080px;
+  margin: 50px auto 0;
+}
+
+.whole_width{
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.contents_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.index_header * {
+  padding: 0 10px;
+}
+
+.blue_button {
+  background-color: #3366FF;
+  color: #fff;
+  border-radius: 10%;
+  height: 30px;
+  margin: auto 0;
+  padding: 10px 15px;
+  line-height: 180%;
+}
+
+.blue_button:hover{
+  background-color: #3366CC;
+}
+
+.link {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border:1px solid #333;
+}
+
+td {
+  text-align: center;
+}
+
+.index_footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+.show-edit-new_width {
+  width: 640px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px 20px;
+}
+
+.text-field {
+  display: block;
+}
+
+.edit-new_elements {
+  margin-top: 10px; 
+}
+
+.title_field {
+  display: block;
+  width: 50%;
+}
+
+.memo_area {
+  display: block;
+  width: 90%;
+  height: 50px;
+}

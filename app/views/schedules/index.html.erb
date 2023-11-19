@@ -1,0 +1,43 @@
+<div class="whole_width">
+  <div class="contents_header">
+    <h3>予定一覧</h3>
+    <%= link_to "新規登録", :new_schedule, class:"link blue_button" %>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @schedules.each do |schedule| %>
+        <tr>
+          <td><%= schedule.id %></td>
+          <td><%= schedule.title %></td>
+          <td><%= schedule.start_date %></td>
+          <td><%= schedule.end_date %></td>
+          <td><%= schedule.all_day_check %></td>
+          <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+          <td><%= link_to "詳細", schedule, class:"link" %></td>
+          <td><%= link_to "編集", [:edit, schedule], class:"link" %></td>
+          <td><%= link_to "削除", schedule, method: :delete, data: { confirm: "予定を削除しますか？" }, class:"link" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="index_footer">
+    <p>予定合計 <%= Schedule.count %> 件</p>
+    <p>本日の日付 <%= @date %></p>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
