@@ -1,0 +1,30 @@
+<div class="show-edit-new_width">
+  <a><%= link_to "← 一覧に戻る", :schedules, class:"link" %></a>
+  <div class="contents_header">
+    <h2 class="PageTitle"><%= @schedule.title %></h2>
+    <%= link_to "編集", edit_schedule_path(@schedule), class:"link blue_button" %>
+  </div>
+
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>開始日</th>
+          <td><%= @schedule.start_date %></td>
+        </tr>
+        <tr>
+          <th>終了日</th>
+          <td><%= @schedule.end_date %></td>
+        </tr>
+        <tr>
+          <th>終日</th>
+          <td><%= @schedule.all_day_check %></td>
+        </tr>
+        <tr>
+          <th>スケジュールメモ</th>
+          <td><%= @schedule.memo %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
